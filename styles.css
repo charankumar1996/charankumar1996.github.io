@@ -1,0 +1,234 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:boredr-box;
+}
+html,body{
+    background-image: linear-gradient(rgba(80,80,80,0.5),rgba(80,80,80,0.5)), url(abstract.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+header{
+    width: 100%;
+    height:auto;
+}
+nav{
+    justify-content: space-between;
+    width:100%;
+    height:auto;
+    position: fixed;
+    z-index:1;
+    text-align: center;
+}
+#logo img{
+    width:50px;
+    height:50px;
+    padding:3px;
+    margin: 10px;
+    float:left;
+    box-shadow: 0 0 10px white;
+}
+#list ul{
+    float:right;
+    padding: 0;
+    list-style: none;
+}
+#list ul li{
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align:left;
+}
+#list ul li a{
+    display: block;
+    padding: 8px 25px;
+    color:cyan;
+    text-decoration: none;
+}
+#list ul li ul.items{
+    min-width:100%;
+    min-height:100px;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left:0px;
+    background-color: black;
+}
+#list ul li  a:hover{
+    color:lawngreen;
+    cursor:pointer;
+    font-size:small;
+    letter-spacing: 0.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 1s;
+    text-shadow: 0 0 10px lawngreen;
+}
+#list ul li:hover ul.items{
+    display: block;
+}
+#main{
+    position: absolute;
+    top:30%;
+    left:0%;
+}
+h5.text{
+    position: absolute;
+    left:30%;
+    top:-4%;
+    text-align: center;
+    letter-spacing: 3px;
+    animation: animate-text 3s linear infinite;
+    animation-direction: alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow: 0 0 10px black;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animate-text {
+    from{
+        width:0%;
+    }
+    to{
+        width:42%;
+    }
+}
+#main img{
+    position: relative;
+    width:24%;
+    box-shadow: 0 0 10px black;
+}
+#content{
+    text-align: center;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+}
+    h4,h5{
+    color:orange;
+    letter-spacing: 0.1rem;
+}
+p{
+    color:white;
+}
+#footer{
+    position: absolute;
+    top:117%;
+    width:100%;
+    height:80px;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+}
+#footer img{
+    margin:15px 10px;
+    box-shadow: 0 0 5px white;
+    float:left;
+}
+#footer h5{
+    margin:5px;
+    float:left;
+    font-size: 20px;
+    position: relative;
+    top:30%;
+    left:30%;
+}
+#footer img.pics{
+    width:30px;
+    height:30px;
+    text-align: center;
+    position: relative;;
+    left:33%;
+    top:3%;
+    padding:0.5rem;
+}
+    @media only screen and (max-width:560px){
+    #list ul.type{
+        background-color: black
+
+    }
+    #list ul li{
+        width:100%;
+        margin-left:37%;
+        letter-spacing: 0.1rem;
+        overflow: hidden;
+    }
+    #list ul li ul.items{
+        position: relative;
+        left:-37%;
+        background-color: black
+
+    }
+    nav{
+        background-color: black
+    }
+    #main{
+        position: absolute;
+        top:43%;
+    }
+    h5.text{
+        position: absolute;
+        left:10%;
+        top:-2%;
+    }
+    @keyframes animate-text {
+        from{
+            width:0%;
+        }
+        to{
+            width:90%;
+        }
+    }
+    #main img{
+        width:95%;
+        height:150px;
+        position: relative;
+        left:2%;
+    }
+    #logo img{
+       position: relative;
+       left:44%;
+       box-shadow: 0 0 5px white;
+    }
+    #footer{
+        position: absolute;
+        top:240%;
+        width:100%;
+        height:80px;
+    }
+    #footer img.pics{
+        width:30px;
+        height:30px;
+        text-align: center;
+        position: relative;;
+        left:8%;
+        top:3%;
+        padding:0.5rem;
+    }
+    #footer h5{
+        margin:5px;
+        float:left;
+        font-size: 20px;
+        position: relative;;
+        left:1%;
+    }
+}
+@media only screen and (min-width:561px){
+    #main img{
+        width:21%;
+        position: relative;
+        left:4%;
+        padding:0.1rem
+    }
+}
+@media only screen and (max-width:800px){
+    @keyframes animate-text {
+        from{
+            width:0%;
+        }
+        to{
+            width:90%;
+        }
+    }
+    h5.text{
+        position: absolute;
+        left:2%;
+        top:-2%;
+    }
+}

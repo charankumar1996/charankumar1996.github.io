@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+    width: 100%;
+    height:auto;
+}
+nav{
+    justify-content: space-between;
+    width:100%;
+    height:auto;
+    position: fixed;
+    z-index:1;
+    text-align: center;
+}
+#logo img{
+    width:50px;
+    height:50px;
+    padding:3px;
+    margin: 10px;
+    float:left;
+    box-shadow: 0 0 10px black;
+}
+#list ul{
+    float:right;
+    padding: 0;
+    list-style: none;
+}
+#list ul li{
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align:left;
+}
+#list ul li a{
+    display: block;
+    padding: 8px 25px;
+    color:red;
+    text-decoration: none;
+}
+#list ul li ul.items{
+    min-width:100%;
+    min-height:100px;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left:0px;
+    background-color: black;
+}
+#list ul li  a:hover{
+    color:lawngreen;
+    cursor:pointer;
+    font-size:small;
+    letter-spacing: 0.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 1s;
+    text-shadow: 0 0 10px lawngreen;
+}
+#list ul li:hover ul.items{
+    display: block;
+}
+        body{
+            background-color:whitesmoke
+        }
+        h2{
+            text-align: center;
+            color:rgb(44, 38, 38);
+        }
+        #text{
+            position: absolute;
+            top:8%;
+            color:rgb(44, 38, 38);
+            margin:3px;
+            padding:0.1rem;
+        }
+        #container{
+            position: absolute;
+            top:22%;
+        }
+        .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .responsive {
+    width:49%;
+    margin: 6px 0;
+  }
+  img{
+      position: relative;
+      left:20%;
+  }
+  .desc{
+      text-align: center;
+      letter-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .responsive {
+    width: 100%;
+  }
+  img{
+      position: relative;
+      width:70%;
+      left:10%;
+  }
+  #container{
+      position: absolute;
+      top:28%;
+  }
+}
+@media only screen and (max-width:600px){
+#list ul.type{
+        background-color: black
+
+    }
+    #list ul li{
+        width:100%;
+        margin-left:37%;
+        letter-spacing: 0.1rem;
+        overflow: hidden;
+    }
+    #list ul li ul.items{
+        position: relative;
+        left:-37%;
+        background-color: black
+
+    }
+    nav{
+        background-color: black
+    }
+    #logo img{
+        position: relative;
+        left:40%;
+        box-shadow: 0 0 5px black;
+     }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+              <img src="logo.png">
+            </div>
+            <div id="list">
+                <ul class="type">
+                    <li><a href="index.html"><i class="fa fa-home"></i>&nbsp;HOME</a></li>
+                    <li><a href="about.html"><i class="fa fa-question"></i>&nbsp;ABOUT</a></li>
+                    <li><a href="#"><i class="fa fa-wrench"></i>&nbsp;SERVICES</a>
+                    <ul class="items">
+                        <li><a href="webdev.html">WEB DEVELOPMENT</a></li>
+                        <li><a href="devops.html">DEVOPS</a></li>
+                        <li><a href="ain.html">AI</a></li>
+                        <li><a href="apti.html">APTITUDE</a></li>
+                        <li><a href="mal.html">MACHINE</a></li>
+                    </ul>
+                    </li>
+
+                    <li><a href="contact.html"><i class="fa fa-phone"></i>&nbsp;CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header><br>
+    <div id="text">
+        <h2>APTITUDE</h2><hr>
+       <p></p>
+    </div><br><br>
+    <div id="container">
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="apt1.jpg" alt="apt1" width="250px" height="200">
+          </a>
+          <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempore neque exercitationem amet ipsa rem itaque placeat earum dolorum vel nostrum nemo quis eveniet, sit nihil, aut fugiat cum vitae fuga. Culpa incidunt perferendis dolor fugiat laboriosam quod, architecto voluptates, eligendi iusto facilis rerum distinctio, temporibus cum! Sapiente, placeat minus?</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_forest.jpg">
+            <img src="apt2.jpg" alt="apt2" width="250" height="200">
+          </a>
+          <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quam repellat facilis voluptate! Nemo animi quidem eius, adipisci quo ipsum voluptatibus est, excepturi neque et quae. Molestiae, ut non harum necessitatibus reiciendis illum, nulla consequuntur tempore nobis repellat facilis quibusdam nostrum culpa omnis nihil cumque delectus nesciunt. Corrupti, id veniam!</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_lights.jpg">
+            <img src="apt3.jpg" alt="apt3" width="250" height="200">
+          </a>
+          <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quisquam impedit voluptas placeat cupiditate ut, sunt quam adipisci odit nesciunt doloribus dolorum, nisi minus ullam nobis soluta consequatur facilis! Magni architecto, alias totam assumenda commodi minima ipsam quod nesciunt quas cupiditate inventore tempora quam reprehenderit. Similique quas molestias quia soluta?</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_mountains.jpg">
+            <img src="apt4.jpg" alt="apt4" width="250" height="200">
+          </a>
+          <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus vitae doloribus exercitationem fugit corrupti dignissimos sapiente accusantium, omnis labore fugiat dolorum ipsam modi eaque debitis molestiae hic esse non reprehenderit sed ducimus nesciunt temporibus? Deserunt temporibus id incidunt alias. Quisquam eveniet, hic quo illum sequi neque tempora magnam voluptates!</div>
+        </div>
+      </div>
+      </div>
+</body>
+</html>

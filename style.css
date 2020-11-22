@@ -1,0 +1,111 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:boredr-box;
+}
+html,body{
+    background-image: linear-gradient(rgba(80,80,80,0.5),rgba(80,80,80,0.5)), url(abstract.jpg);
+    background-attachment:fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    width: 100%;
+    height:auto;
+}
+nav{
+    justify-content: space-between;
+    width:100%;
+    height:auto;
+    position: fixed;
+    z-index:1;
+    text-align: center;
+}
+#logo img{
+    width:50px;
+    height:50px;
+    padding:3px;
+    margin: 10px;
+    float:left;
+    box-shadow: 0 0 10px white;
+}
+#list ul{
+    float:right;
+    padding: 0;
+    list-style: none;
+}
+#list ul li{
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align:left;
+}
+#list ul li a{
+    display: block;
+    padding: 8px 25px;
+    color:cyan;
+    text-decoration: none;
+}
+#list ul li ul.items{
+    min-width:100%;
+    min-height:100px;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left:0px;
+    background-color: black;
+}
+#list ul li  a:hover{
+    color:lawngreen;
+    cursor:pointer;
+    font-size:small;
+    letter-spacing: 0.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 1s;
+    text-shadow: 0 0 10px lawngreen;
+}
+#list ul li:hover ul.items{
+    display: block;
+}
+#content{
+    position: absolute;
+    text-align: center;
+    top:20%;
+    width:100%;
+    color:white;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+}
+h3,h2{
+    color:orange;
+}
+@media only screen and (max-width:560px){
+    #list ul.type{
+        background-color: black
+
+    }
+    #list ul li{
+        width:100%;
+        margin-left:37%;
+        letter-spacing: 0.1rem;
+        overflow: hidden;
+    }
+    #list ul li ul.items{
+        position: relative;
+        left:-37%;
+        background-color: black
+
+    }
+    nav{
+        background-color: black
+    }
+    #logo img{
+        position: relative;
+        left:44%;
+        box-shadow: 0 0 5px white;
+     }
+     #content{
+         position: absolute;
+         top:40%;
+     }
+    }
